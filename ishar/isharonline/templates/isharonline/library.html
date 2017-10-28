@@ -134,7 +134,19 @@ $(function(){
 
 
 var app = angular.module("Irsha", []);
-app.controller('ItemController', function($scope, $http) {
+app.controller('ArticleController', function($scope, $http) {
+  $http({
+    method: 'GET',
+    url: '/meditations'
+  }).then(function successCallback(response) {
+    $scope.articles = response.data;
+    console.log(response.data);
+
+    }, function errorCallback(data) {
+        console.log('Error: ' + data);
+
+});
+
 
 });
 
@@ -147,12 +159,12 @@ app.controller('ItemController', function($scope, $http) {
 
 </head>
 
-<body>
+<body ng-app="Irsha">
 
 
     <div class="content-wrapper">
 
-        <div class="content" ng-app="Irsha">
+        <div class="content" n>
 
 
 
@@ -217,25 +229,13 @@ app.controller('ItemController', function($scope, $http) {
       About ISHAR
     </a>
 
-    <a class="item">
-      Affiliations
-    </a>
-    <a class="item">
-      Supervisory Board
-    </a>
-    <a class="item">
-      Contact
-    </a>
-    <a class="item">
-      Scholar Hub Search
-    </a>
+
 
   </div>
 
 
-  <div class="main-content">
+  <div class="main-content" ng-controller="ArticleController">
     <h1>Integrative Health Topics </h1>
-  </div>
 
 
 
