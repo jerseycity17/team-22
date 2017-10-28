@@ -37,4 +37,7 @@ class meditations(models.Model):
     
     def __str__(self):
         """this sets the default return for this object"""
-        return self.description
+        return '|'.join(map(str, [self.Key, self.ItemType, self.PublicationYear, self.Author, self.Title, self.PublicationTitle, self.ISSN, 
+                        self.DOI, self.AbstractNote, self.Date, self.DateAdded, self.DateModified, self.Pages, self.Issue, 
+                        self.JournalAbbreviation, self.ShortTitle, self.Language, self.LibraryCatalog, self.Extra, self.LinkAttachment, 
+                        self.AutomaticTags])) 
