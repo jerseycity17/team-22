@@ -128,6 +128,21 @@ div.head{
 
 $(function(){
 
+
+  $( "body" ).on( "click", "#psych", function() {
+
+
+  });
+  $( ".grid-wrapper" ).on( "click", "#longevity", function() {
+
+
+
+  });
+  $( "body" ).on( "click", "#medical", function() {
+
+
+  });
+
   $("i.sidebar.icon").click(function(){
     $('.ui.sidebar').sidebar('toggle');
 
@@ -192,7 +207,7 @@ app.controller('ArticleController', function($scope, $http) {
     <div class="right menu">
       <div class="ui search">
       <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="Search Articles...">
+        <input class="prompt" type="text" id="search" placeholder="Search Articles..." ng-model = "search">
         <i class="search icon"></i>
       </div>
       <div class="results"></div>
@@ -237,9 +252,9 @@ app.controller('ArticleController', function($scope, $http) {
         </h1>
         <div class="ui three column doubling stackable grid container tdt" >
           <div class = "column">
-            <div class="ui card">
+            <div class="ui card" id="longevity" >
               <div class="head">
-                <h4> Longevity </h4>
+                <h4 > Longevity </h4>
               </div>
             </div>
 
@@ -247,7 +262,7 @@ app.controller('ArticleController', function($scope, $http) {
           <div class = "column">
             <div class="ui card">
               <div class="head">
-                <h4> Medical </h4>
+                <h4 id="medical"> Medical </h4>
               </div>
             </div>
 
@@ -255,10 +270,50 @@ app.controller('ArticleController', function($scope, $http) {
           <div class = "column">
             <div class="ui card">
               <div class="head">
-                <h4> Psychological </h4>
+                <h4 id ="psych"> Psychological </h4>
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="article-section ui segment" ng-repeat="article in articles | filter:search | orderBy: Title" >
+
+
+          <h3 class="art-title">     {% verbatim %}
+
+            {{article.Title}}
+
+            {% endverbatim %}   </h3>
+
+          <img> </img>
+          <div class="abs-content">
+        <p>
+          <h3> Author: </h3> <span>  {% verbatim %}
+
+          {{article.Author}}
+
+          {% endverbatim %} </h3>
+
+        <span class="abs" style="display:none;">
+          <h3> Abstract </h3>
+
+          {% verbatim %}
+
+         {{article.AbstractNote}}
+
+         {% endverbatim %}   </h3>
+         </span>
+
+
+
+        </p>
+        <button class="ui fluid  button read-it"> READ MORE </button>
+        <input type="hidden" class="hidden_input" value = {% verbatim %}
+
+        {{article.id}}
+
+        {% endverbatim %}>   </input>
+        </div>
         </div>
       </div>
 
