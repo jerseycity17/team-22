@@ -1,4 +1,3 @@
-
 from django.db import models
 # Leverage Django's built-in User models
 from django.contrib.auth.models import User
@@ -16,7 +15,7 @@ class Ishar(models.Model):
 class meditations(models.Model):
     Key = models.CharField(max_length=9)
     ItemType = models.CharField(max_length=15)
-    Publication = models.IntegerField()
+    PublicationYear = models.IntegerField()
     Author = models.CharField(max_length=200)
     Title = models.CharField(max_length=300)
     PublicationTitle = models.CharField(max_length=500)
@@ -36,8 +35,6 @@ class meditations(models.Model):
     LinkAttachment = models.CharField(max_length=200)
     AutomaticTags = models.CharField(max_length=300)
     
-
-
     def __str__(self):
         """this sets the default return for this object"""
         return self.description
