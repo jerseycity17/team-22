@@ -1,15 +1,8 @@
-from isharonline import meditation
 from rest_framework import serializers
+from .models import meditations
 
-
-class meditationsSerializer (serializers.Serializer):
-    title = serializers.CharField(read_only=True)
-
-def create(self, validated_data):
-    return meditation.objects.create(**validated_data)
-
-def update(self, instance, validated_data):
-    instance.title = validated_data.get('title, instance.title')
-    return instance
-
-
+class MeditationsSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = meditations
+        field = '__all__'

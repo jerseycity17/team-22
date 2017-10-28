@@ -37,4 +37,4 @@ class meditations(models.Model):
     
     def __str__(self):
         """this sets the default return for this object"""
-        return self.description
+        return self.Key
