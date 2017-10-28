@@ -5,4 +5,4 @@ class MeditationsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = meditations
-        field = '__all__'
+        fields = '__all__'
