@@ -140,11 +140,11 @@ div.ui.secondary.pointing.menu.nav-menu{
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     z-index: 4;
+    color: white !important;
     background-color: #22313F;
     padding: 20px;
-    color: white !important;
-  border-bottom:  1px solid #222;
-  margin-bottom: 10px;
+    border-bottom: 1px solid #222;
+    margin-bottom: 10px;
 
 }
 
@@ -281,10 +281,8 @@ app.controller('ArticleController', function($scope, $http) {
 
     {% endverbatim %}   </h3>
 
-  <img> </img>
-  <div class="abs-content">
 <p>
-  <h3> Author: </h3> <span>  {% verbatim %}
+  <h3> Author: {% verbatim %}
 
   {{article.Author}}
 
@@ -293,16 +291,15 @@ app.controller('ArticleController', function($scope, $http) {
 <span class="abs" style="display:none;">
   <h3> Abstract </h3>
 
+<h3>
   {% verbatim %}
 
  {{article.AbstractNote}}
 
  {% endverbatim %}   </h3>
  </span>
-
-
-
 </p>
+
 <button class="ui fluid  button read-it"> READ MORE </button>
 <input type="hidden" class="hidden_input" value = {% verbatim %}
 
@@ -311,10 +308,6 @@ app.controller('ArticleController', function($scope, $http) {
 {% endverbatim %}>   </input>
 </div>
 </div>
-
-
-
-
 
 <div class="ui modal">
   <i class="close icon"></i>
