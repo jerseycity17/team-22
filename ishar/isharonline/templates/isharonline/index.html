@@ -123,9 +123,9 @@ h3.art-title{
 
 div.content-footer.ui.segment{
 
-bottom:0;
-width: 100%;
-height: 30%;
+  bottom:0;
+  width: 100%;
+  height: 30%;
   background-color: green;
 }
 
@@ -164,6 +164,13 @@ $(function(){
     $('.ui.sidebar').sidebar('toggle');
 
   });
+
+  $( "body" ).on( "click", ".read-it", function() {
+    $(this).hide();
+    $(this).siblings(".abs").show();
+
+
+});
 
 
 
@@ -215,7 +222,7 @@ app.controller('ArticleController', function($scope, $http) {
   </a>
 
 
-  <a class="item">
+  <a class="item" href="/library">
     ISHAR Library
   </a>
 
@@ -250,7 +257,7 @@ app.controller('ArticleController', function($scope, $http) {
   <a class="item">
     ISHAR Library
   </a>
-  
+
   <a class="item">
     About ISHAR
   </a>
@@ -277,7 +284,13 @@ app.controller('ArticleController', function($scope, $http) {
   <img> </img>
   <div class="abs-content">
 <p>
+  <h3> Author: </h3> <span>  {% verbatim %}
 
+  {{article.Author}}
+
+  {% endverbatim %} </h3>
+
+<span class="abs" style="display:none;">
   <h3> Abstract </h3>
 
   {% verbatim %}
@@ -285,14 +298,12 @@ app.controller('ArticleController', function($scope, $http) {
  {{article.AbstractNote}}
 
  {% endverbatim %}   </h3>
+ </span>
 
-<h3> Author: </h3> <span>  {% verbatim %}
 
-{{article.Author}}
 
-{% endverbatim %} </h3>
 </p>
-<button class="ui fluid  button "> READ MORE </button>
+<button class="ui fluid  button read-it"> READ MORE </button>
 <input type="hidden" class="hidden_input" value = {% verbatim %}
 
 {{article.id}}
@@ -301,6 +312,22 @@ app.controller('ArticleController', function($scope, $http) {
 </div>
 </div>
 
+
+
+
+
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+  </div>
+
+    <div class="description">
+
+  </div>
+  <div class="actions">
+
+  </div>
+</div>
 
 
 
