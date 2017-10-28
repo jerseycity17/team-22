@@ -129,6 +129,23 @@ div.head{
 
 $(function(){
 
+
+  $( "body" ).on( "click", "#psych", function() {
+  alert(123);
+
+
+  });
+  $( ".grid-wrapper" ).on( "click", "#longevity", function() {
+
+
+
+  });
+  $( "body" ).on( "click", "#medical", function() {
+    alert(123);
+
+
+  });
+
   $("i.sidebar.icon").click(function(){
     $('.ui.sidebar').sidebar('toggle');
 
@@ -241,9 +258,9 @@ app.controller('ArticleController', function($scope, $http) {
         </h1>
         <div class="ui three column doubling stackable grid container tdt" >
           <div class = "column">
-            <div class="ui card">
+            <div class="ui card" id="longevity" >
               <div class="head">
-                <h4> Longevity </h4>
+                <h4 > Longevity </h4>
               </div>
             </div>
 
@@ -251,7 +268,7 @@ app.controller('ArticleController', function($scope, $http) {
           <div class = "column">
             <div class="ui card">
               <div class="head">
-                <h4> Medical </h4>
+                <h4 id="medical"> Medical </h4>
               </div>
             </div>
 
@@ -259,7 +276,7 @@ app.controller('ArticleController', function($scope, $http) {
           <div class = "column">
             <div class="ui card">
               <div class="head">
-                <h4> Psychological </h4>
+                <h4 id ="psych"> Psychological </h4>
               </div>
             </div>
           </div>
