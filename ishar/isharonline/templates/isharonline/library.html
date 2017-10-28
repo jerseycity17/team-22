@@ -94,6 +94,10 @@ height: 305%;
     font-size: 15px;
 }
 
+div.ui.segment{
+  width: 90%;
+  margin: 10px auto;
+}
 div.ui.secondary.pointing.menu.nav-menu{
   overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
@@ -226,12 +230,14 @@ app.controller('ArticleController', function($scope, $http) {
   <div class="main-content" ng-controller="ArticleController">
     <h1>Integrative Health Topics </h1>
 
-    <div class="ui segment">
-      <h1>
-        Meditations
-      </h1>
-    </div>
 
+<div class="grid-wrapper">
+
+      <div class="ui segment">
+        <h1>
+          Meditations
+        </h1>
+      </div>
       <div class="ui four column doubling stackable grid container tdt" >
 
         <div class = "column">
@@ -325,6 +331,8 @@ app.controller('ArticleController', function($scope, $http) {
 
         </div>
         </div>
+
+      </div>
 
 </body>
 
