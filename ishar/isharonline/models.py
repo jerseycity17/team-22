@@ -1,3 +1,4 @@
+
 from django.db import models
 # Leverage Django's built-in User models
 from django.contrib.auth.models import User
@@ -11,3 +12,11 @@ class Ishar(models.Model):
     def __str__(self):
         """this sets the default return for this object"""
         return self.description
+
+class meditations(models.Model):
+
+
+    def __str__(self):
+        """this sets the default return for this object"""
+        return self.description
+
