@@ -1,0 +1,52 @@
+html, body 
+{
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+.content-wrapper
+ {
+  background-color: #EEEEEE;
+    font-weight: 600;
+  background-size: cover;
+  height: 800px;
+}
+
+.ui 
+{
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  
+}
+    
+.ui.secondary.pointing
+{
+    font-size: 15px;
+    color: white;
+}
+
+.main-content
+{
+    color: #1F3A93;
+}
+
+.art-title
+{
+    color: #1F3A93;
+}
+
+.article-section
+{
+    color: #6C7A89;
+}
+#item
+{
+      color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
