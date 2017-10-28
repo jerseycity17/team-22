@@ -38,6 +38,9 @@ div.ui.secondary.pointing.menu.nav-menu a.item{
   display: none;
 }
 
+a.item{
+  color: black;
+}
 .ui.secondary.pointing{
     font-size: 15px;
 }
@@ -69,7 +72,36 @@ div.article-section.ui.segment{
   height: 75%;
 
 }
+div.
+.sidebar.icon{
+  display:none;
+}
 
+div.main-content{
+  margin: 0 auto;
+  text-align: center;
+   margin-top: 80px;
+   padding: 10px;
+}
+div.article-section.ui.segment .abs-content {
+
+padding: 15px;
+}
+
+div.article-section.ui.segment{
+
+  margin: 10px auto;
+  width: 70%;
+  height: 75%;
+  padding: 0px;
+
+}
+h3.art-title{
+  color: white;
+  background-color: #336E7B;
+  text-align: center;
+  padding: 10px;
+}
 .sidebar.icon{
   display:none;
 }
@@ -84,7 +116,7 @@ height: 305%;
 
 .ui.menu .item
 {
-    color:white;
+  color:white;
     font-size: 15px;
 }
 
@@ -140,6 +172,7 @@ $(function(){
 
   });
   $( "body" ).on( "click", "#medical", function() {
+
 
 
   });
@@ -205,15 +238,7 @@ app.controller('ArticleController', function($scope, $http) {
       About ISHAR
     </a>
 
-    <div class="right menu">
-      <div class="ui search">
-      <div class="ui icon input">
-        <input class="prompt" type="text" id="search" placeholder="Search Articles..." ng-model = "search">
-        <i class="search icon"></i>
-      </div>
-      <div class="results"></div>
-    </div>
-    </div>
+
   </div>
 
 
@@ -248,6 +273,13 @@ app.controller('ArticleController', function($scope, $http) {
 <div class="grid-wrapper">
 
       <div class="ui segment">
+        <div class="ui search">
+        <div class="ui huge icon input">
+          <input class="prompt" type="text" id="search" placeholder="Search Articles..." ng-model = "search">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
         <h1>
           Meditation
         </h1>
@@ -295,7 +327,7 @@ app.controller('ArticleController', function($scope, $http) {
 
           {% endverbatim %} </h3>
 
-        <span class="abs" style="display:none;">
+        <span class="abs" >
           <h3> Abstract </h3>
 
           {% verbatim %}
@@ -308,7 +340,6 @@ app.controller('ArticleController', function($scope, $http) {
 
 
         </p>
-        <button class="ui fluid  button read-it"> READ MORE </button>
         <input type="hidden" class="hidden_input" value = {% verbatim %}
 
         {{article.id}}
