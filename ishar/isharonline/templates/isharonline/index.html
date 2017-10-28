@@ -7,6 +7,9 @@
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"> </script>
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"> </script>
@@ -19,6 +22,23 @@
 
 
 <style>
+
+
+@media screen and (max-width: 600px) {
+
+div.ui.secondary.pointing.menu.nav-menu a.item{
+
+  display: none;
+}
+
+
+i.sidebar.icon{
+  display: block;
+}
+
+}
+
+
 body,html{
   width: 100%;
   height: 100%;
@@ -27,7 +47,7 @@ body,html{
 div.main-content{
   margin: 0 auto;
   text-align: center;
-   margin-top: 30px;
+   margin-top: 50px;
 }
 div.article-section.ui.segment{
 
@@ -42,6 +62,9 @@ div.article-section.ui.segment{
 }
 
 
+
+
+
 div.ui.secondary.pointing.menu.nav-menu{
   overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
@@ -53,6 +76,24 @@ div.ui.secondary.pointing.menu.nav-menu{
 }
 
 </style>
+
+<script>
+
+
+
+$(function(){
+
+  $("i.sidebar.icon").click(function(){
+    $('.ui.sidebar').sidebar('toggle');
+
+  });
+
+
+
+});
+
+
+</script>
 </head>
 
 
@@ -62,6 +103,8 @@ div.ui.secondary.pointing.menu.nav-menu{
   <div class="content-wrapper">
 
       <div class="content">
+
+
 
         <div class="ui secondary pointing menu nav-menu">
 
@@ -104,6 +147,40 @@ div.ui.secondary.pointing.menu.nav-menu{
   </div>
 </div>
 
+
+
+
+<div class="ui sidebar menu vertical nav-menu">
+
+  <a class="active item">
+    Home
+  </a>
+
+
+  <a class="item">
+    ISHAR Library
+  </a>
+  <a class="item">
+    Consciousness
+  </a>
+  <a class="item">
+    About ISHAR
+  </a>
+
+  <a class="item">
+    Affiliations
+  </a>
+  <a class="item">
+    Supervisory Board
+  </a>
+  <a class="item">
+    Contact
+  </a>
+  <a class="item">
+    Scholar Hub Search
+  </a>
+
+</div>
 
 
 <div class="main-content">
