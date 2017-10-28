@@ -1,34 +1,203 @@
 <!DOCTYPE html>
 
 <head>
-
+<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"> </script>
+
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"> </script>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="./Web.css">
 
 <title> ISHAR Online </title>
 
 
+
+<style>
+
+
+@media screen and (max-width: 600px) {
+
+div.ui.secondary.pointing.menu.nav-menu a.item{
+
+  display: none;
+}
+
+
+i.sidebar.icon{
+  display: block;
+}
+
+
+}
+
+.content-wrapper
+ {
+  background-color: #EEEEEE;
+    font-weight: 600;
+
+}
+
+.ui
+{
+  font-size: 20px;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+
+}
+
+.ui.secondary.pointing
+{
+    font-size: 15px;
+    color: white;
+}
+
+.main-content
+{
+    color: #1F3A93;
+}
+
+.art-title
+{
+    color: #1F3A93;
+}
+
+.article-section
+{
+    color: #6C7A89;
+}
+#item
+{
+      color: white;
+}
+
+a:hover{
+  color: white !important;
+}
+body,html{
+  width: 100%;
+  height: 100%;
+  font-family: 'Asap', sans-serif !important;
+
+}
+
+div.main-content{
+  margin: 0 auto;
+  text-align: center;
+   margin-top: 80px;
+   padding: 10px;
+}
+div.article-section.ui.segment .abs-content {
+
+padding: 15px;
+}
+
+div.article-section.ui.segment{
+
+  margin: 10px auto;
+  width: 70%;
+  height: 75%;
+  padding: 0px;
+
+}
+h3.art-title{
+  color: white;
+  background-color: #336E7B;
+  text-align: center;
+  padding: 10px;
+}
+.sidebar.icon{
+  display:none;
+}
+
+div.content-footer.ui.segment{
+
+bottom:0;
+width: 100%;
+height: 30%;
+  background-color: green;
+}
+
+
+
+
+div.ui.secondary.pointing.menu.nav-menu{
+  overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 4;
+    background-color: #22313F;
+    padding: 20px;
+    color: white !important;
+  border-bottom:  1px solid #222;
+  margin-bottom: 10px;
+
+}
+
+div.ui.secondary.pointing.menu.nav-menu a{
+  color: white;
+}
+
+</style>
+
+<script>
+
+
+
+$(function(){
+
+  $("i.sidebar.icon").click(function(){
+    $('.ui.sidebar').sidebar('toggle');
+
+  });
+
+
+
+});
+
+
+
+var app = angular.module("Irsha", []);
+app.controller('ItemController', function($scope, $http) {
+
+});
+
+
+
+
+
+</script>
 </head>
 
 
 <body>
+
+
   <div class="content-wrapper">
 
-      <div class="content">
+      <div class="content" ng-app="Irsha">
 
-        <div class="ui secondary pointing menu">
-  <a class="active item">
+
+
+        <div class="ui secondary pointing menu nav-menu">
+
+          <i class="sidebar icon" style="font-size:30px; margin-top:5px;"></i>
+  <a class=" item">
     Home
   </a>
+
+
   <a class="item">
     ISHAR Library
   </a>
@@ -52,17 +221,223 @@
     Scholar Hub Search
   </a>
   <div class="right menu">
-    <a class="ui item">
-      Log in
-    </a>
+    <div class="ui search">
+    <div class="ui icon input">
+      <input class="prompt" type="text" placeholder="Search Articles...">
+
+      <button class="ui button"> Search </button>
+
+    </div>
+
+    <div class="results"></div>
+  </div>
   </div>
 </div>
-<div class="ui segment">
+
+
+
+
+<div class="ui sidebar menu vertical nav-menu">
+
+  <a class=" item">
+    Home
+  </a>
+
+
+  <a class="item">
+    ISHAR Library
+  </a>
+  <a class="item">
+    Consciousness
+  </a>
+  <a class="item">
+    About ISHAR
+  </a>
+
+  <a class="item">
+    Affiliations
+  </a>
+  <a class="item">
+    Supervisory Board
+  </a>
+  <a class="item">
+    Contact
+  </a>
+  <a class="item">
+    Scholar Hub Search
+  </a>
 
 </div>
 
 
+<div class="main-content">
+  <!-- <h1> Where Scientific Rigor Meets Open Minds </h1> -->
+</div>
 
+
+<div class="article-section ui segment">
+
+  <h3 class="art-title">  Meditations </h3>
+
+  <img> </img>
+  <div class="abs-content">
+<p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+ nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+ in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+</p>
+<button class="ui fluid  button "> READ MORE </button>
+
+</div>
+</div>
+
+
+
+    <div class="article-section ui segment">
+
+      <h3 class="art-title"> Tada </h3>
+
+      <img> </img>
+      <div class="abs-content">
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  </p>
+  <button class="ui fluid  button"> READ MORE </button>
+
+</div>
+    </div>
+
+    <div class="article-section ui segment">
+
+      <h3 class="art-title"> Tada </h3>
+
+      <img> </img>
+      <div class="abs-content">
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  </p>
+  <button class="ui fluid  button"> READ MORE </button>
+
+  </div>
+    </div>
+
+
+
+    <div class="article-section ui segment">
+
+      <h3 class="art-title"> Tada </h3>
+
+      <img> </img>
+      <div class="abs-content">
+  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+  </p>
+  <button class="ui fluid  button"> READ MORE </button>
+
+</div>
+    </div>
+
+
+
+          <div class="article-section ui segment">
+
+            <h3 class="art-title"> Tada </h3>
+
+            <img> </img>
+        <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+        </p>
+          </div>
+
+
+            <div class="article-section ui segment">
+
+              <h3 class="art-title"> Tada </h3>
+
+              <img> </img>
+          <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+          </p>
+            </div>
+
+
+              <div class="article-section ui segment">
+
+                <h3 class="art-title"> Tada </h3>
+
+                <img> </img>
+            <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+               in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </p>
+              </div>
+
+
+                <div class="article-section ui segment">
+
+                  <h3 class="art-title"> Tada </h3>
+
+                  <img> </img>
+              <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+              </p>
+                </div>
+
+
+                  <div class="article-section ui segment">
+
+                    <h3 class="art-title"> Tada </h3>
+
+                    <img> </img>
+                <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                   in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+                </p>
+                  </div>
+
+
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+        <h2>Where Scientific Rigor Meets Open Minds</h2>
+
+        <img class="left" src="http://isharonline.org/sites/default/files/resize/ishar_logo_3.0_3-219x197.png"> </img>
+
+    </div>
   </div>
 </body>
 
