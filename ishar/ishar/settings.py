@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'isharonline.apps.IsharonlineConfig'
+    'isharonline.apps.IsharonlineConfig',
+    'csvimport.app.CSVImportConf'
 ]
 
 MIDDLEWARE = [
