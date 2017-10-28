@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+
+<head>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"> </script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"> </script>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="Web.css">
+
+<title> ISHAR Online </title>
+
+
+
+<style>
+
+
+@media screen and (max-width: 600px) {
+
+div.ui.secondary.pointing.menu.nav-menu a.item{
+
+  display: none;
+}
+
+
+i.sidebar.icon{
+  display: block;
+}
+
+}
+
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+div.main-content{
+  margin: 0 auto;
+  text-align: center;
+   margin-top: 50px;
+}
+div.article-section.ui.segment{
+
+  margin: 30px auto;
+  width: 70%;
+  height: 75%;
+
+}
+
+.sidebar.icon{
+  display:none;
+}
+
+div.content-footer.ui.segment{
+
+bottom:0;
+width: 100%;
+height: 305%;
+  background-color: green;
+}
+
+
+
+
+div.ui.secondary.pointing.menu.nav-menu{
+  overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 4;
+    background-color: white;
+    padding: 5px;
+
+}
+
+</style>
+
+<script>
+
+
+
+$(function(){
+
+  $("i.sidebar.icon").click(function(){
+    $('.ui.sidebar').sidebar('toggle');
+
+  });
+
+
+
+});
+
+
+
+var app = angular.module("Irsha", []);
+app.controller('ItemController', function($scope, $http) {
+
+});
+
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+
+    <div class="content-wrapper">
+
+        <div class="content" ng-app="Irsha">
+
+
+
+          <div class="ui secondary pointing menu nav-menu">
+
+            <i class="sidebar icon" style="font-size:30px; margin-top:5px;"></i>
+    <a class="active item">
+      Home
+    </a>
+
+
+    <a class="item">
+      ISHAR Library
+    </a>
+    <a class="item">
+      Consciousness
+    </a>
+    <a class="item">
+      About ISHAR
+    </a>
+
+    <a class="item">
+      Affiliations
+    </a>
+    <a class="item">
+      Supervisory Board
+    </a>
+    <a class="item">
+      Contact
+    </a>
+    <a class="item">
+      Scholar Hub Search
+    </a>
+    <div class="right menu">
+      <div class="ui search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search Articles...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="ui sidebar menu vertical nav-menu">
+
+    <a class="active item">
+      Home
+    </a>
+
+
+    <a class="item">
+      ISHAR Library
+    </a>
+    <a class="item">
+      Consciousness
+    </a>
+    <a class="item">
+      About ISHAR
+    </a>
+
+    <a class="item">
+      Affiliations
+    </a>
+    <a class="item">
+      Supervisory Board
+    </a>
+    <a class="item">
+      Contact
+    </a>
+    <a class="item">
+      Scholar Hub Search
+    </a>
+
+  </div>
+
+
+  <div class="main-content">
+    <h1> </h1>
+  </div>
+
+
+
+      <div class="ui four column doubling stackable grid container tdt" >
+
+        <div class = "column">
+          <div class="ui card">
+            <div class="image">
+              Bio Field
+            </div>
+            <div class="content">
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class = "column">
+          <div class="ui card">
+            <div class="image">
+              Bio Field
+            </div>
+            <div class="content">
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class = "column">
+          <div class="ui card">
+            <div class="image">
+              Bio Field
+            </div>
+            <div class="content">
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class = "column">
+          <div class="ui card">
+            <div class="image">
+              Bio Field
+            </div>
+            <div class="content">
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class = "column">
+          <div class="ui card">
+            <div class="image">
+              Bio Field
+            </div>
+            <div class="content">
+
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                 in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+            </div>
+
+          </div>
+
+        </div>
+        </div>
+
+
+
+
+
+
+</body>
+
+
+</html>

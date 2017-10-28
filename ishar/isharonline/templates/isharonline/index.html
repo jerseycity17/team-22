@@ -15,7 +15,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"> </script>
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="W.css">
 
 <title> ISHAR Online </title>
 
@@ -61,6 +61,13 @@ div.article-section.ui.segment{
   display:none;
 }
 
+div.content-footer.ui.segment{
+
+bottom:0;
+width: 100%;
+height: 305%;
+  background-color: green;
+}
 
 
 
@@ -72,6 +79,7 @@ div.ui.secondary.pointing.menu.nav-menu{
     width: 100%; /* Full width */
     z-index: 4;
     background-color: white;
+    padding: 5px;
 
 }
 
@@ -93,6 +101,16 @@ $(function(){
 });
 
 
+
+var app = angular.module("Irsha", []);
+app.controller('ItemController', function($scope, $http) {
+
+});
+
+
+
+
+
 </script>
 </head>
 
@@ -102,7 +120,7 @@ $(function(){
 
   <div class="content-wrapper">
 
-      <div class="content">
+      <div class="content" ng-app="Irsha">
 
 
 
@@ -324,6 +342,13 @@ $(function(){
                   </div>
 
 
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+        <h2>Where Scientific Rigor Meets Open Minds</h2>
+    </div>
   </div>
 </body>
 
