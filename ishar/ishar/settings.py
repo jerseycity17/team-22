@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'isharonline.apps.IsharonlineConfig',
-    'csvimport.app.CSVImportConf'
+    'csvimport.app.CSVImportConf',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -70,8 +71,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ishar.wsgi.application'
-
-
+"""
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+"""
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -81,7 +89,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
