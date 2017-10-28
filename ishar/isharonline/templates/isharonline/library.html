@@ -58,8 +58,9 @@ body,html{
 div.main-content{
   margin: 0 auto;
   text-align: center;
-   margin-top: 50px;
-    position: relative;
+  margin-top: 50px;
+  position: relative;
+  padding: 35px;
 }
 div.article-section.ui.segment{
 
@@ -237,7 +238,11 @@ app.controller('ArticleController', function($scope, $http) {
   <div class="main-content" ng-controller="ArticleController">
     <h1>Integrative Health Topics </h1>
 
-
+    <div class="ui segment">
+      <h1>
+        Meditations
+      </h1>
+    </div>
 
       <div class="ui four column doubling stackable grid container tdt" >
 
@@ -253,8 +258,6 @@ app.controller('ArticleController', function($scope, $http) {
               </li>
 
             </ul>
-
-
 
             </div>
 
@@ -334,11 +337,6 @@ app.controller('ArticleController', function($scope, $http) {
 
         </div>
         </div>
-
-
-
-
-
 
 </body>
 
