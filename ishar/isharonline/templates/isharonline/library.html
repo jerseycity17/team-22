@@ -2,8 +2,7 @@
 
 
 <head>
-
-
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -28,11 +27,20 @@
 
 @media screen and (max-width: 600px) {
 
+.content-wrapper
+{
+    background-color: #eeeeee;
+        font-weight: 600;
+}
+
 div.ui.secondary.pointing.menu.nav-menu a.item{
 
   display: none;
 }
 
+.ui.secondary.pointing{
+    font-size: 15px;
+}
 
 i.sidebar.icon{
   display: block;
@@ -44,12 +52,14 @@ i.sidebar.icon{
 body,html{
   width: 100%;
   height: 100%;
+    background-color: #EEEEEE;
 }
 
 div.main-content{
   margin: 0 auto;
   text-align: center;
    margin-top: 50px;
+    position: relative;
 }
 div.article-section.ui.segment{
 
@@ -71,8 +81,17 @@ height: 305%;
   background-color: green;
 }
 
+.ui.menu .item
+{
+    color:white;
+    font-size: 15px;
+}
 
-
+.ui.secondary.pointing.menu .active.item
+{
+    color:white;
+    font-size: 15px;
+}
 
 div.ui.secondary.pointing.menu.nav-menu{
   overflow: hidden;
@@ -80,16 +99,19 @@ div.ui.secondary.pointing.menu.nav-menu{
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     z-index: 4;
-    background-color: white;
-    padding: 5px;
+    color: white !important;
+    background-color: #22313F;
+    padding: 20px;
     border-bottom: 1px solid #222;
+    margin-bottom: 10px;
 
 }
 
 div.head{
   text-align: center;
   padding: 10px;
-  background-color: green;
+    color: white;
+  background-color: #336E7B;
 }
 
 </style>
