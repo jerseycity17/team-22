@@ -18,6 +18,9 @@ from .serializers import MeditationsSerializer
 def index(request):
     return render(request, "isharonline/index.html")
 
+def library(request):
+    return render(request, "isharonline/library.html")
+
 class MeditationList(APIView):
 
     def get(self, request):
