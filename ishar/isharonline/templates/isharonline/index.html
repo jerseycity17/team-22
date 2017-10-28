@@ -169,7 +169,20 @@ $(function(){
 
 
 var app = angular.module("Irsha", []);
-app.controller('ItemController', function($scope, $http) {
+
+app.controller('ArticleController', function($scope, $http) {
+  $http({
+    method: 'GET',
+    url: '/meditations'
+  }).then(function successCallback(response) {
+    $scope.articles = response.data;
+    console.log(response.data);
+
+    }, function errorCallback(data) {
+        console.log('Error: ' + data);
+
+});
+
 
 });
 
@@ -181,30 +194,30 @@ app.controller('ItemController', function($scope, $http) {
 </head>
 
 
-<body>
+<body ng-app="Irsha">
 
 
   <div class="content-wrapper">
 
-      <div class="content" ng-app="Irsha">
+      <div class="content" >
 
 
 
         <div class="ui secondary pointing menu nav-menu">
 
           <i class="sidebar icon" style="font-size:30px; margin-top:5px;"></i>
-  <a href="http://127.0.0.1:8000/"class=" item">
+  <a class=" item">
     Home
   </a>
 
 
-  <a href="http://127.0.0.1:8000/library/" class="item">
+  <a class="item">
     ISHAR Library
   </a>
   <a class="item">
     Consciousness
   </a>
-  <a href="http://127.0.0.1:8000/about/" class="item">
+  <a class="item">
     About ISHAR
   </a>
 
@@ -223,7 +236,7 @@ app.controller('ItemController', function($scope, $http) {
   <div class="right menu">
     <div class="ui search">
     <div class="ui icon input">
-      <input class="prompt" type="text" placeholder="Search Articles...">
+      <input class="prompt" type="text" placeholder="Search Articles..." ng-model = "search">
 
       <button class="ui button"> Search </button>
 
@@ -239,18 +252,18 @@ app.controller('ItemController', function($scope, $http) {
 
 <div class="ui sidebar menu vertical nav-menu">
 
-  <a href="http://127.0.0.1:8000/" class=" item">
+  <a class=" item">
     Home
   </a>
 
 
-  <a href="http://127.0.0.1:8000/library/" class="item">
+  <a class="item">
     ISHAR Library
   </a>
   <a class="item">
     Consciousness
   </a>
-  <a href="http://127.0.0.1:8000/about/" class="item">
+  <a class="item">
     About ISHAR
   </a>
 
@@ -270,22 +283,29 @@ app.controller('ItemController', function($scope, $http) {
 </div>
 
 
-<div class="main-content">
+<div class="main-content" ng-controller="ArticleController" >
   <!-- <h1> Where Scientific Rigor Meets Open Minds </h1> -->
-</div>
 
 
-<div class="article-section ui segment">
+<div class="article-section ui segment" ng-repeat="article in articles | filter:search" >
 
-  <h3 class="art-title">  Meditations </h3>
+
+  <h3 class="art-title">     {% verbatim %}
+
+    {{article.Title}}
+
+    {% endverbatim %}   </h3>
 
   <img> </img>
   <div class="abs-content">
-<p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
- nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
- in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-  sunt in culpa qui officia deserunt mollit anim id est laborum."
+<p>
+
+  {% verbatim %}
+
+ {{article.AbstractNote}}
+
+ {% endverbatim %}   </h3>
+
 
 </p>
 <button class="ui fluid  button "> READ MORE </button>
@@ -295,25 +315,9 @@ ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita
 
 
 
-    <div class="article-section ui segment">
 
-      <h3 class="art-title"> Tada </h3>
 
-      <img> </img>
-      <div class="abs-content">
-  <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-     nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-  </p>
-  <button class="ui fluid  button"> READ MORE </button>
-
-</div>
-    </div>
-
-    <div class="article-section ui segment">
+    <!-- <div class="article-section ui segment">
 
       <h3 class="art-title"> Tada </h3>
 
@@ -425,7 +429,7 @@ ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita
                     sunt in culpa qui officia deserunt mollit anim id est laborum."
 
                 </p>
-                  </div>
+                  </div> -->
 
 
   </div>
