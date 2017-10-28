@@ -1,0 +1,103 @@
+html, body 
+{
+  margin: 0;
+  padding: 0;
+  background-color: #EEEEEE;
+}
+
+.content-wrapper
+ {
+  background-color: #EEEEEE;
+    font-weight: 600;
+  background-size: cover;
+  height: 800px;
+}
+
+.ui 
+{
+  font-size: 20px;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  
+}
+
+.ui.secondary.pointing
+{
+    font-size: 15px;
+    color: white;
+}
+
+.main-content
+{
+    color: #1F3A93;
+}
+
+.art-title
+{
+    color: #1F3A93;
+}
+
+.article-section
+{
+    color: #6C7A89;
+}
+#item
+{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+  font-family: 'Asap', sans-serif !important;
+}
+
+
+div.main-content{
+  margin: 0 auto;
+  text-align: center;
+   margin-top: 80px;
+   padding: 10px;
+}
+div.article-section.ui.segment .abs-content {
+padding: 15px;
+}
+div.article-section.ui.segment{
+  margin: 10px auto;
+  width: 70%;
+  height: 75%;
+  padding: 25px 25px 25px 25px;
+}
+h3.art-title{
+  color: white;
+  background-color: #336E7B;
+  text-align: center;
+  padding: 10px;
+}
+.sidebar.icon{
+  display:none;
+}
+div.content-footer.ui.segment{
+bottom:0;
+width: 100%;
+height: 30%;
+  background-color: green;
+}
+div.ui.secondary.pointing.menu.nav-menu{
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 4;
+    background-color: #22313F;
+    padding: 20px;
+    color: white !important;
+  border-bottom:  1px solid #222;
+  margin-bottom: 10px;
+}
+div.ui.secondary.pointing.menu.nav-menu a{
+  color: black;
+}
